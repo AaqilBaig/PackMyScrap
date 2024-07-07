@@ -5,7 +5,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const BookingForm = () => {
     const { dispatch } = useBookingsContext()
-    const { user } = useAuthContext()
+    const { user,url } = useAuthContext()
 
     const [material, setMaterial] = useState('')
     const [phone,setPhone] = useState('')
@@ -19,7 +19,7 @@ const BookingForm = () => {
 
         const booking = {material, phone, date, time, address};
 
-        const response = await fetch('/bookings', {
+        const response = await fetch(url + '/bookings', {
             method: 'POST',
             body: JSON.stringify(booking),
             headers: {
