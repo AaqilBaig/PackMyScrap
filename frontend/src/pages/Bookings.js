@@ -25,7 +25,6 @@ const Bookings = () => {
     useEffect(() => {
     const fetchBookings = async () => {
         try {
-            console.log(url);
             const response = await fetch(`${url}/bookings`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`

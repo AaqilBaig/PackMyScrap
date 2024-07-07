@@ -21,6 +21,8 @@ export const AuthContextProvider = ({ children }) => {
         user: null
     })
 
+    const url = "https://packmyscrap-server.onrender.com";
+
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user'))
         if(user) {
@@ -29,8 +31,6 @@ export const AuthContextProvider = ({ children }) => {
     }, [])
 
     console.log(state)
-
-    const url = "https://packmyscrap-server.onrender.com";
 
     return (
         <AuthContext.Provider value={{ ...state,dispatch,url }}>
