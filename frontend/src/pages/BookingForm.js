@@ -5,7 +5,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 const BookingForm = () => {
     const { dispatch } = useBookingsContext()
-    const { user } = useAuthContext()
+    const { user,url } = useAuthContext()
 
     const [material, setMaterial] = useState('')
     const [phone,setPhone] = useState('')
@@ -19,7 +19,7 @@ const BookingForm = () => {
 
         const booking = {material, phone, date, time, address};
 
-        const response = await fetch('/bookings', {
+        const response = await fetch(`${url}/bookings`, {
             method: 'POST',
             body: JSON.stringify(booking),
             headers: {
@@ -49,8 +49,14 @@ const BookingForm = () => {
             <hr style={{marginTop: '5vh'}}/>
                 <form action="#" className="form" onSubmit={handleSubmit}>
                     <div className="input-box">
-                    <label>Recycle-Material</label>
-                        <input type="text" placeholder="Enter Material" onChange={(e) => {setMaterial(e.target.value)}} value={material} required />
+                        <label>Recycle-Material</label>
+                        <select value={material} onChange={(e) => {setMaterial(e.target.value)}} required>
+                            <option value="">Select an option</option>
+                            <option value="Iron">Iron</option>
+                            <option value="Aluminium">Aluminium</option>
+                            <option value="E-waste">E-Waste</option>
+                            <option value="Paper">Paper</option>
+                        </select>
                     </div>
                     <div className="column">
                         <div className="input-box">
@@ -70,11 +76,11 @@ const BookingForm = () => {
                         <label>Your Address</label>
                         <input type="text" placeholder="Enter street address" onChange={(e) => {setAddress(e.target.value)}} value={address} required />
                         <div className="column">
-                            <input type="text" placeholder="Enter your region" required />
+                            <input type="text" placeholder="Enter your landmark " required />
                             <input type="number" placeholder="Enter postal code" required />
                         </div>
                     </div>
-                    <button>Submit</button>
+                    <button onClick={handleSubmit}>Submit</button>
                     {error && <div className="error-book">{error}</div>}
                 </form>
             

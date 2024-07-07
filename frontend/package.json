@@ -1,5 +1,7 @@
 {
-  "proxy": "http://localhost:4000",
+  "options": {
+    "allowedHosts": ["localhost", ".localhost"]
+  },
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -37,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "webpack-dev-server": "^4.15.1"
   }
 }

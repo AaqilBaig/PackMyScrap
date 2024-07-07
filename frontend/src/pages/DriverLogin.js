@@ -3,7 +3,7 @@ import { useLogin } from "../hooks/useLogin";
 import '../styles/Login.css';
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const DriverLogin = () => {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -50,7 +50,7 @@ const Login = () => {
                 </div>
 
                 <div className="register">
-                    <span>Don't have an account? <Link to={'/signup'}>Register</Link></span>
+                    <span>Don't have an account? <Link to={'/driversignup'}>Register</Link></span>
                 </div>
                 {error && <div className="error">{error}</div>}
             </form>
@@ -58,4 +58,4 @@ const Login = () => {
     );
 }
  
-export default Login;
+export default DriverLogin;

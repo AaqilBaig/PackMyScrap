@@ -28,6 +28,7 @@
 .homepage{
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .title-1{
@@ -63,16 +64,49 @@ video{
   width: 100%;
   height: auto;
   z-index: 0;
-  filter:contrast(35%);
+  filter:contrast(80%);
 }
 
-.whyus{
+.HowToUse {
   padding: 7vh 4vw;
   margin-top: -100px;
   background-color: rgb(0, 168, 84);
-  
+  display: flex;
 }
 
-.getstarted{
-  padding: 7vh 4vw;
+h1.header {
+  width: auto;
+  background-color: rgb(0, 168, 84);
+  margin-top: -50px;
+  z-index: 1;
+  color: #fff;
+
+}
+
+.use {
+  flex: 1;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.use img {
+  width: 80px;
+  height: auto;
+}
+
+.use p {
+  color: #fff;
+  padding-top: 20px;
+}
+
+.use hr {
+  width: 70%;
+  margin: 20px 0;
+}
+
+.Rates{
+  align-items: center;
+  padding: 50px 100px;
 }

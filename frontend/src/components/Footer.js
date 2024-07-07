@@ -14,7 +14,7 @@ const Footer = () => {
             <div className="media-icons">
               <a href="#"><i className="fab fa-facebook-f"></i></a>
               <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="https://www.instagram.com/packmyscrap/"><i className="fab fa-instagram"></i></a>
               <a href="#"><i className="fab fa-linkedin-in"></i></a>
               <a href="#"><i className="fab fa-youtube"></i></a>
             </div>
@@ -41,13 +41,13 @@ const Footer = () => {
               <li><a href="#">Prefrences</a></li>
               <li><a href="#">Purchase</a></li>
             </ul>
-            <ul className="box">
+            {/* <ul className="box">
               <li className="link_name">Courses</li>
               <li><a href="#">HTML & CSS</a></li>
               <li><a href="#">JavaScript</a></li>
               <li><a href="#">Photography</a></li>
               <li><a href="#">Photoshop</a></li>
-            </ul>
+            </ul> */}
             <ul className="box input-box">
               <li className="link_name">Review</li>
               <li><input type="text" placeholder="whats your review?" /></li>

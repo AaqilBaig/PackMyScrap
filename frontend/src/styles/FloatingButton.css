@@ -8,6 +8,7 @@
     width: 70px;
     display: flex;
     align-items: center;
+    z-index: 2;
 }
 
 .FloatingButton:hover{

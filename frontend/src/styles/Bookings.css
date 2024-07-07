@@ -6,11 +6,40 @@
 .bookings{
   display: flex;
   flex-direction: column;
+  margin-bottom: 100vh;
+  padding-top: 40px;
 }
 
 .booking-details{
   background-color: #fff;
-  padding: 2px;
+  padding: 10px;
+  width: 100%;
+  margin: 8px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 3px  rgb(179, 179, 179);
+
+  h4 {
+
+
+  }
+
+  strong {
+
+  }
+
+  p {
+
+  }
+
+  span {
+    color: red;
+    border: red solid 2px;
+    border-radius: 15px;
+    padding: 3px 4px;
+  }
+  span:hover{
+    cursor: pointer;
+  }
 }
 
 .container_book {
@@ -22,6 +51,7 @@
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
+    margin-bottom: 50px;
   }
 
   .container_book header {
@@ -118,6 +148,10 @@
 
   .error-book{
     width: 200px;
+  }
+
+  .NA {
+    
   }
   /*Responsive*/
   @media screen and (max-width: 500px) {

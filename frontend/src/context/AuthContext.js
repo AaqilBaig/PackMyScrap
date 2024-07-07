@@ -15,6 +15,8 @@ export const authReducer = (state, action) => {
 
 export const AuthContextProvider = ({ children }) => {
 
+    
+
     const [state, dispatch] = useReducer(authReducer, {
         user: null
     })
@@ -28,8 +30,10 @@ export const AuthContextProvider = ({ children }) => {
 
     console.log(state)
 
+    const url = "https://packmyscrap-server.onrender.com";
+
     return (
-        <AuthContext.Provider value={{ ...state,dispatch }}>
+        <AuthContext.Provider value={{ ...state,dispatch,url }}>
             { children }
         </AuthContext.Provider>
     )

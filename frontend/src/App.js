@@ -11,6 +11,9 @@ import Home from './pages/Home';
 import { useAuthContext } from './hooks/useAuthContext'
 import FloatingButton from './components/FloatingButton';
 import BookingForm from './pages/BookingForm'
+import ScrapRates from './pages/ScrapRates';
+import DriverLogin from './pages/DriverLogin';
+import DriverSignup from './pages/DriverSignup';
 
 function App() {
   
@@ -20,17 +23,18 @@ function App() {
       <BrowserRouter>
         <Navbar />
             <Routes>
+              <Route path='/' element={<Navigate to={'/home'}/>} />
               <Route 
-                path='/'
+                path='/home'
                 element={<Home/>}
               />
               <Route 
                 path='/mybookings'
-                element={user ? <Bookings /> : <Navigate to={'/login'}/>}
+                element={<Bookings />}
               />
               <Route 
                 path='/newbooking'
-                element={user ? <BookingForm /> : <Navigate to={'/login'}/>}
+                element={<BookingForm />}
               />
               <Route 
                 path='/signup'
@@ -48,11 +52,23 @@ function App() {
                 path='/contactus'
                 element={<ContactUs />}
               />
+              <Route
+                path='/scraprates'
+                element={<ScrapRates/>}
+              />
+              <Route
+                path='/driverlogin'
+                element={<DriverLogin/>}
+              />
+              <Route
+                path='/driversignup'
+                element={<DriverSignup/>}
+              />
             </Routes>
         <Footer />
         <FloatingButton />
       </BrowserRouter>
-    </div>
+    </div>    
   );
 }
 

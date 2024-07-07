@@ -2,139 +2,70 @@
 @import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
 
-/* .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #40b736;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .nav-links a:hover {
-    background-color: #40b736;
-    border-radius: 4px;
-    color: white;
-  } */
+.about {
+  width: 100%;
+  background-color: #4CAF50;
+  color: #fff;
+  font-size: x-large;
+  margin-top: -20px;
+  overflow: hidden;
+  padding: 20px; /* Added padding */
 
-  /* About Section */
-  
-  .about {
-    background: rgb(224, 251, 222);
-    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
-    padding: 100px 0 20px 0;
+  .title {
+    background-color: #fff;
     text-align: center;
+    color: #4CAF50;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  
-  .about h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .about p {
-    font-size: 1rem;
-    color: #323030;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+
   .about-info {
-    margin: 2rem 2rem;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    text-align: left;
-  }
-  
-  .about-img {
-    width: 20rem;
-    height: 20rem;
-  
-  }
-  
-  .about-img img {
-    width: 80%;
-    height: 80%;
-    
-    border-radius: 5px;
-    /* object-fit: contain; */
-  }
-  
-  .about-info p {
-    font-size: 1.3rem;
-    margin: 0 2rem;
-    text-align: justify;
-  }
-  
-  .img-shadow{
-    box-shadow: 5px 5px 2px rgb(0, 0, 0);
-    border: 2px solid black;
-    border-radius: 100px;
-  }
-  .shadow-effect{
-    text-shadow:5px 5px 13px rgb(121, 224, 19); 
-  }
-  /* Media Queries */
-  @media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        flex-direction: column;
-        text-align: center;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
+    margin-top: 20px;
+    overflow: hidden;
+    width: 100%; /* Ensure full width */
+
+    &:nth-child(odd) {
+      background-color: rgb(238, 231, 221);
+      overflow: hidden;
+      color: black; /* Alternate background color for odd sections */
     }
-  
-    .nav-links.active {
-        display: flex;
+
+    padding: 50px 30px; /* Added padding to .about-info */
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
     }
-  
-    .nav-links li {
-        margin: 10px 0;
+
+    p {
+      font-size: 16px;
     }
-  
-    .about {
-        padding: 20px 0;
+
+    button {
+      background-color: #fff;
+      color: #4CAF50;
+      padding: 10px 15px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
     }
-  
-    .about h1 {
-        font-size: 2rem;
-    }
-  
-    .about-info {
-        flex-direction: column;
-    }
-  
+
     .about-img {
-        width: 100%;
-        margin: 20px 0;
+      padding: 10px 80px;
     }
-  
+
     .about-img img {
-        width: 100%;
+      max-width: 100%; /* Ensure images don't exceed their container */
+      padding: 10px; /* Add padding around the images */
+      width: 80vw;
+      height: auto;
+      border-radius: 8px; /* Add border-radius for rounded corners */
+      mix-blend-mode: color-burn; /* Blend image background with the overall background color */
     }
-  
-    .about-info p {
-        margin: 0 20px;
-    }
+    
   }
-  
+}
