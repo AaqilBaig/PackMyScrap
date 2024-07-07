@@ -7,6 +7,15 @@ const port = process.env.PORT || 3000;
 
 const app = express()
 
+app.use(
+    cors({
+      origin: ["http://localhost:3000", "http://localhost:5173", "https://robofetch.onrender.com/"],
+      methods: "GET,POST,PUT,DELETE",
+      credentials: true,
+      allowedHeaders: 'Content-Type,Authorization'
+    })
+  );
+
 app.use(express.json())
 
 app.use('/auth', userRoutes)
