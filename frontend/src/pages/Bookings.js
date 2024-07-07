@@ -5,12 +5,12 @@ import { useAuthContext } from '../hooks/useAuthContext'
 const Bookings = () => {
     
     const { bookings,dispatch } = useBookingsContext()
-    const { user } = useAuthContext()
+    const { user,url } = useAuthContext()
 
     useEffect(() => {
     const fetchBookings = async () => {
         try {
-            const response = await fetch('/bookings', {
+            const response = await fetch(`${url}/bookings`, {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
